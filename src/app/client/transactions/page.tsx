@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Download, Search, Filter } from "lucide-react";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Input } from "@/components/ui/input";
+import { cn } from "@/lib/utils";
 
 const statusColors = {
   Completed: "bg-green-500/20 text-green-400 border-green-500/30",

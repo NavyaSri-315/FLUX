@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { mockClientUser, mockStablecoinRates, mockClientFeedback, mockTransactions } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, DollarSign, Gem, Users, Zap } from "lucide-react";
+import { ArrowLeftRight, ArrowUpRight, DollarSign, Gem, Users, Zap } from "lucide-react";
 import Link from "next/link";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Image from "next/image";
