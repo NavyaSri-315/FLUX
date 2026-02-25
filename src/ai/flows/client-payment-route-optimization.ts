@@ -69,7 +69,7 @@ Local Rail:
   Savings vs SWIFT: {{{localRailSavings}}}%
 
 Provide your response in a JSON format matching the following structure:
-{{jsonSchema ClientPaymentRouteOptimizationOutputSchema}}
+{{jsonSchema}}
 `,
 });
 

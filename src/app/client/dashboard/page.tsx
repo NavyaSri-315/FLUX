@@ -5,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeftRight, ArrowUpRight, DollarSign, Gem, Users, Zap } from "lucide-react";
 import Link from "next/link";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import Image from "next/image";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Separator } from "@/components/ui/separator";
@@ -38,7 +37,13 @@ const SuccessMetric = ({ icon, title, description }: { icon: React.ReactNode, ti
 
 export default function ClientDashboardPage() {
   const totalTransferred = mockTransactions.reduce((acc, t) => acc + t.amount, 0);
-  const feesSaved = mockTransactions.reduce((acc, t) => acc + (t.amount * t.savingsPercentage / 100 * 0.01), 0); // Approximation
+  const feesSaved = mockTransactions.reduce((acc, t) => {
+    if (t.status === 'Completed' && t.savingsPercentage > 0) {
+      const traditionalFee = t.feePaid / (1 - t.savingsPercentage / 100);
+      return acc + (traditionalFee - t.feePaid);
+    }
+    return acc;
+  }, 0);
 
   return (
     <div className="p-4 md:p-8 space-y-8">
