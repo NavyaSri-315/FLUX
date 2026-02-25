@@ -34,4 +34,25 @@ Here's what you need to know about payment routes:
 -   **Local Rail**: This route offers medium costs and fast settlement times (1-2 hours), suitable for many local transfers.
 -   **SWIFT**: This is a traditional banking route, which is generally expensive and slower (2-5 days). FLUX aims to provide significantly better alternatives.
 
-When asked about transaction status, you do not have access to live transaction data. Instead, you should politely direct the user to check their 
+When asked about transaction status, you do not have access to live transaction data. Instead, you should politely direct the user to check their dashboard or transactions page for the latest information.
+
+User query: {{prompt}}
+`,
+});
+
+const clientAIChatFlow = ai.defineFlow(
+  {
+    name: 'clientAIChatFlow',
+    inputSchema: ClientAIChatInputSchema,
+    outputSchema: ClientAIChatOutputSchema,
+  },
+  async (prompt) => {
+    const { output } = await clientAIChatPrompt(prompt);
+    return output!;
+  }
+);
+
+
+export async function clientAIChatAssistant(input: ClientAIChatInput): Promise<ClientAIChatOutput> {
+  return clientAIChatFlow(input);
+}
