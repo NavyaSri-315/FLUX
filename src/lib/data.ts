@@ -45,9 +45,9 @@ export const mockClientFeedback: ClientFeedback[] = [
 
 export const mockTeamMembers: TeamMember[] = [
   { uid: 'team1', name: 'Navya', email: 'navya@flux.com', role: 'Lead Developer', tasksCompleted: 12, tasksPending: 3 },
-  { uid: 'team2', name: 'Sowmya', email: 'sowmya@flux.com', role: 'Product Manager', tasksCompleted: 8, tasksPending: 1 },
-  { uid: 'team3', name: 'Subhash', email: 'subhash@flux.com', role: 'Blockchain Engineer', tasksCompleted: 15, tasksPending: 2 },
-  { uid: 'team4', name: 'Gaffar', email: 'gaffar@flux.com', role: 'Client Success', tasksCompleted: 20, tasksPending: 0 },
+  { uid: 'team2', name: 'Sowmya', email: 'sowmya@flux.com', role: 'Product Manager', tasksCompleted: 8, tasksPending: 2 },
+  { uid: 'team3', name: 'Subhash', email: 'subhash@flux.com', role: 'Blockchain Engineer', tasksCompleted: 15, tasksPending: 4 },
+  { uid: 'team4', name: 'Gaffar', email: 'gaffar@flux.com', role: 'Client Success', tasksCompleted: 20, tasksPending: 1 },
 ];
 
 export const mockTasks: Task[] = [
