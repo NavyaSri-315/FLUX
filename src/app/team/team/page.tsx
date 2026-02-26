@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import { mockTeamMembers } from "@/lib/data";
@@ -14,7 +14,6 @@ const TeamMemberCard = ({ member }: { member: TeamMember }) => {
     <Card className="bg-card/60 backdrop-blur-xl border-border/30">
         <CardContent className="p-6 text-center">
             <Avatar className="h-20 w-20 mx-auto mb-4">
-                <AvatarImage src={member.avatarUrl} alt={member.name} />
                 <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
             </Avatar>
             <h3 className="text-lg font-semibold">{member.name}</h3>

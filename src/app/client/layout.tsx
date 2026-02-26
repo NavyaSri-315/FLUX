@@ -4,9 +4,6 @@ import {
   Sidebar,
   SidebarHeader,
   SidebarContent,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuButton,
   SidebarFooter,
   SidebarInset,
 } from '@/components/ui/sidebar';
@@ -21,7 +18,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { Logo } from '@/components/logo';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { mockClientUser } from '@/lib/data';
 import { Button } from '@/components/ui/button';
 import { AIChatWidget } from '@/components/ai-chat-widget';
@@ -50,7 +47,6 @@ export default function ClientLayout({
             <SidebarFooter className="mt-auto">
             <div className="flex items-center gap-3 p-2 rounded-md bg-muted/50">
                 <Avatar className="h-9 w-9">
-                <AvatarImage src={mockClientUser.avatarUrl} alt={mockClientUser.name} />
                 <AvatarFallback>{mockClientUser.name.charAt(0)}</AvatarFallback>
                 </Avatar>
                 <div className="flex-1 overflow-hidden">

@@ -1,11 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
 import { mockClientUser } from "@/lib/data";
-import { CheckCircle, Edit, Bell, CreditCard, ShieldCheck } from "lucide-react";
+import { Edit, CreditCard, ShieldCheck } from "lucide-react";
 import { Switch } from "@/components/ui/switch";
 
 const DetailRow = ({ label, value }: { label: string, value: string }) => (
@@ -31,7 +30,6 @@ export default function ProfilePage() {
             <Card className="bg-card/60 backdrop-blur-xl border-border/30">
                 <CardContent className="p-6 text-center">
                     <Avatar className="h-24 w-24 mx-auto mb-4">
-                        <AvatarImage src={mockClientUser.avatarUrl} alt={mockClientUser.name} />
                         <AvatarFallback>{mockClientUser.name.charAt(0)}</AvatarFallback>
                     </Avatar>
                     <h2 className="text-xl font-semibold">{mockClientUser.name}</h2>

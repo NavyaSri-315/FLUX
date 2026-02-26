@@ -5,7 +5,7 @@ import { teamRevenueData, mockClientFeedback } from "@/lib/data";
 import { DollarSign, ArrowLeftRight, Users, TrendingUp, Star, Server } from "lucide-react";
 import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent } from "@/components/ui/chart";
 import { Bar, BarChart, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 
 const StatCard = ({ title, value, icon, change }: { title: string, value: string, icon: React.ReactNode, change?: string }) => (
@@ -121,7 +121,6 @@ export default function TeamDashboardPage() {
             {mockClientFeedback.slice(0, 3).map((feedback) => (
               <div key={feedback.id} className="flex items-start gap-4">
                 <Avatar>
-                  <AvatarImage src={feedback.avatarUrl} />
                   <AvatarFallback>{feedback.clientName.charAt(0)}</AvatarFallback>
                 </Avatar>
                 <div className="flex-1">

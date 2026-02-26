@@ -8,7 +8,6 @@ export const mockClientUser: User = {
   balance: 150325.75,
   feesOwed: 258.90,
   createdAt: '2023-01-15T10:00:00Z',
-  avatarUrl: 'https://picsum.photos/seed/101/100/100',
 };
 
 export const mockTeamUser: TeamMember = {
@@ -18,7 +17,6 @@ export const mockTeamUser: TeamMember = {
   role: 'Lead Developer',
   tasksCompleted: 12,
   tasksPending: 3,
-  avatarUrl: 'https://picsum.photos/seed/102/100/100',
 };
 
 export const mockTransactions: Transaction[] = [
@@ -40,16 +38,16 @@ export const mockStablecoinRates: StablecoinRate[] = [
 ];
 
 export const mockClientFeedback: ClientFeedback[] = [
-    { id: 'FB01', clientId: 'c1', clientName: 'Jane Doe', clientCompany: 'Innovate LLC', rating: 5, comment: 'FLUX is a game-changer! Our international payments are now incredibly fast and cheap.', timestamp: '2024-03-20T10:00:00Z', avatarUrl: 'https://picsum.photos/seed/201/100/100' },
-    { id: 'FB02', clientId: 'c2', clientName: 'John Smith', clientCompany: 'Global Exports', rating: 5, comment: 'The savings are substantial compared to our old bank. The AI route suggestions are brilliant.', timestamp: '2024-03-18T14:30:00Z', avatarUrl: 'https://picsum.photos/seed/202/100/100' },
-    { id: 'FB03', clientId: 'c3', clientName: 'Emily White', clientCompany: 'Tech Solutions', rating: 4, comment: 'Excellent service, though I wish there were more local rail options for Africa.', timestamp: '2024-03-15T09:00:00Z', avatarUrl: 'https://picsum.photos/seed/203/100/100' },
+    { id: 'FB01', clientId: 'c1', clientName: 'Jane Doe', clientCompany: 'Innovate LLC', rating: 5, comment: 'FLUX is a game-changer! Our international payments are now incredibly fast and cheap.', timestamp: '2024-03-20T10:00:00Z' },
+    { id: 'FB02', clientId: 'c2', clientName: 'John Smith', clientCompany: 'Global Exports', rating: 5, comment: 'The savings are substantial compared to our old bank. The AI route suggestions are brilliant.', timestamp: '2024-03-18T14:30:00Z' },
+    { id: 'FB03', clientId: 'c3', clientName: 'Emily White', clientCompany: 'Tech Solutions', rating: 4, comment: 'Excellent service, though I wish there were more local rail options for Africa.', timestamp: '2024-03-15T09:00:00Z' },
 ];
 
 export const mockTeamMembers: TeamMember[] = [
-  { uid: 'team1', name: 'Navya', email: 'navya@flux.com', role: 'Lead Developer', tasksCompleted: 12, tasksPending: 3, avatarUrl: 'https://picsum.photos/seed/102/100/100' },
-  { uid: 'team2', name: 'Sowmya', email: 'sowmya@flux.com', role: 'Product Manager', tasksCompleted: 8, tasksPending: 1, avatarUrl: 'https://picsum.photos/seed/103/100/100' },
-  { uid: 'team3', name: 'Subhash', email: 'subhash@flux.com', role: 'Blockchain Engineer', tasksCompleted: 15, tasksPending: 2, avatarUrl: 'https://picsum.photos/seed/104/100/100' },
-  { uid: 'team4', name: 'Gaffar', email: 'gaffar@flux.com', role: 'Client Success', tasksCompleted: 20, tasksPending: 0, avatarUrl: 'https://picsum.photos/seed/105/100/100' },
+  { uid: 'team1', name: 'Navya', email: 'navya@flux.com', role: 'Lead Developer', tasksCompleted: 12, tasksPending: 3 },
+  { uid: 'team2', name: 'Sowmya', email: 'sowmya@flux.com', role: 'Product Manager', tasksCompleted: 8, tasksPending: 1 },
+  { uid: 'team3', name: 'Subhash', email: 'subhash@flux.com', role: 'Blockchain Engineer', tasksCompleted: 15, tasksPending: 2 },
+  { uid: 'team4', name: 'Gaffar', email: 'gaffar@flux.com', role: 'Client Success', tasksCompleted: 20, tasksPending: 0 },
 ];
 
 export const mockTasks: Task[] = [
@@ -70,11 +68,11 @@ export const mockTimelineEvents: TimelineEvent[] = [
 ];
 
 export const mockClients: Client[] = [
-    { id: 'C01', name: 'Acme Inc.', company: 'Acme Inc.', totalVolume: 1250000, lastTransaction: '2024-03-25', status: 'Active', avatarUrl: 'https://picsum.photos/seed/301/100/100' },
-    { id: 'C02', name: 'Global Exports', company: 'Global Exports Ltd.', totalVolume: 850000, lastTransaction: '2024-03-22', status: 'Active', avatarUrl: 'https://picsum.photos/seed/302/100/100' },
-    { id: 'C03', name: 'Tech Solutions', company: 'Tech Solutions Co.', totalVolume: 2300000, lastTransaction: '2024-03-20', status: 'Active', avatarUrl: 'https://picsum.photos/seed/303/100/100' },
-    { id: 'C04', name: 'Innovate LLC', company: 'Innovate LLC', totalVolume: 450000, lastTransaction: '2024-02-15', status: 'Inactive', avatarUrl: 'https://picsum.photos/seed/304/100/100' },
-    { id: 'C05', name: 'Market Makers', company: 'Market Makers Inc.', totalVolume: 5600000, lastTransaction: '2024-03-18', status: 'Flagged', avatarUrl: 'https://picsum.photos/seed/305/100/100' },
+    { id: 'C01', name: 'Acme Inc.', company: 'Acme Inc.', totalVolume: 1250000, lastTransaction: '2024-03-25', status: 'Active' },
+    { id: 'C02', name: 'Global Exports', company: 'Global Exports Ltd.', totalVolume: 850000, lastTransaction: '2024-03-22', status: 'Active' },
+    { id: 'C03', name: 'Tech Solutions', company: 'Tech Solutions Co.', totalVolume: 2300000, lastTransaction: '2024-03-20', status: 'Active' },
+    { id: 'C04', name: 'Innovate LLC', company: 'Innovate LLC', totalVolume: 450000, lastTransaction: '2024-02-15', status: 'Inactive' },
+    { id: 'C05', name: 'Market Makers', company: 'Market Makers Inc.', totalVolume: 5600000, lastTransaction: '2024-03-18', status: 'Flagged' },
 ];
 
 export const analyticsData = {

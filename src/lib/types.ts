@@ -6,7 +6,6 @@ export type User = {
   balance: number;
   feesOwed: number;
   createdAt: string;
-  avatarUrl: string;
 };
 
 export type TeamMember = {
@@ -16,7 +15,6 @@ export type TeamMember = {
   role: 'Lead Developer' | 'Product Manager' | 'Blockchain Engineer' | 'Client Success';
   tasksCompleted: number;
   tasksPending: number;
-  avatarUrl: string;
 };
 
 export type Transaction = {
@@ -47,7 +45,6 @@ export type ClientFeedback = {
   rating: number;
   comment: string;
   timestamp: string;
-  avatarUrl: string;
 };
 
 export type StablecoinRate = {
@@ -70,5 +67,4 @@ export type Client = {
     totalVolume: number;
     lastTransaction: string;
     status: 'Active' | 'Inactive' | 'Flagged';
-    avatarUrl: string;
 }

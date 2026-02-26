@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeftRight, ArrowUpRight, DollarSign, Gem, Users, Zap } from "lucide-react";
 import Link from "next/link";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Separator } from "@/components/ui/separator";
 
@@ -127,7 +127,6 @@ export default function ClientDashboardPage() {
                     <CardContent className="flex flex-col items-start gap-4 p-6">
                         <div className="flex items-center gap-4">
                              <Avatar className="h-12 w-12">
-                                <AvatarImage src={feedback.avatarUrl} data-ai-hint="person portrait"/>
                                 <AvatarFallback>{feedback.clientName.charAt(0)}</AvatarFallback>
                             </Avatar>
                             <div>

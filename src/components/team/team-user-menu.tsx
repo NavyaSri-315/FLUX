@@ -1,7 +1,7 @@
 'use client';
 
 import { useAuth } from '@/components/auth-provider';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import { type TeamMember } from '@/lib/types';
@@ -32,7 +32,6 @@ export function TeamUserMenu() {
   return (
     <div className="flex items-center gap-3 p-2 rounded-md bg-muted/50">
       <Avatar className="h-9 w-9">
-        <AvatarImage src={teamUser.avatarUrl} alt={teamUser.name} />
         <AvatarFallback>{teamUser.name.charAt(0)}</AvatarFallback>
       </Avatar>
       <div className="flex-1 overflow-hidden">
