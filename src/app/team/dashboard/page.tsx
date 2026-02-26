@@ -1,8 +1,10 @@
+'use client';
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { mockTeamUser, teamRevenueData, mockClientFeedback } from "@/lib/data";
+import { teamRevenueData, mockClientFeedback } from "@/lib/data";
 import { DollarSign, ArrowLeftRight, Users, TrendingUp, Star, Server } from "lucide-react";
 import { ChartContainer, ChartTooltip, ChartTooltipContent, ChartLegend, ChartLegendContent } from "@/components/ui/chart";
-import { Bar, BarChart, Line, LineChart, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import { Bar, BarChart, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 
@@ -116,7 +118,7 @@ export default function TeamDashboardPage() {
         </CardHeader>
         <CardContent>
           <div className="space-y-6">
-            {mockClientFeedback.slice(0, 3).map((feedback, index) => (
+            {mockClientFeedback.slice(0, 3).map((feedback) => (
               <div key={feedback.id} className="flex items-start gap-4">
                 <Avatar>
                   <AvatarImage src={feedback.avatarUrl} />
