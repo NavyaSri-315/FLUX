@@ -13,7 +13,7 @@ export const mockClientUser: User = {
 
 export const mockTeamUser: TeamMember = {
   uid: 'team1',
-  name: 'Alex Chen',
+  name: 'Navya',
   email: 'team@flux.com',
   role: 'Lead Developer',
   tasksCompleted: 12,
@@ -46,20 +46,20 @@ export const mockClientFeedback: ClientFeedback[] = [
 ];
 
 export const mockTeamMembers: TeamMember[] = [
-  { uid: 'team1', name: 'Alex Chen', email: 'alex@flux.com', role: 'Lead Developer', tasksCompleted: 12, tasksPending: 3, avatarUrl: 'https://picsum.photos/seed/102/100/100' },
-  { uid: 'team2', name: 'Sarah Johnson', email: 'sarah@flux.com', role: 'Product Manager', tasksCompleted: 8, tasksPending: 1, avatarUrl: 'https://picsum.photos/seed/103/100/100' },
-  { uid: 'team3', name: 'Mike Patel', email: 'mike@flux.com', role: 'Blockchain Engineer', tasksCompleted: 15, tasksPending: 2, avatarUrl: 'https://picsum.photos/seed/104/100/100' },
-  { uid: 'team4', name: 'Priya Singh', email: 'priya@flux.com', role: 'Client Success', tasksCompleted: 20, tasksPending: 0, avatarUrl: 'https://picsum.photos/seed/105/100/100' },
+  { uid: 'team1', name: 'Navya', email: 'navya@flux.com', role: 'Lead Developer', tasksCompleted: 12, tasksPending: 3, avatarUrl: 'https://picsum.photos/seed/102/100/100' },
+  { uid: 'team2', name: 'Sowmya', email: 'sowmya@flux.com', role: 'Product Manager', tasksCompleted: 8, tasksPending: 1, avatarUrl: 'https://picsum.photos/seed/103/100/100' },
+  { uid: 'team3', name: 'Subhash', email: 'subhash@flux.com', role: 'Blockchain Engineer', tasksCompleted: 15, tasksPending: 2, avatarUrl: 'https://picsum.photos/seed/104/100/100' },
+  { uid: 'team4', name: 'Gaffar', email: 'gaffar@flux.com', role: 'Client Success', tasksCompleted: 20, tasksPending: 0, avatarUrl: 'https://picsum.photos/seed/105/100/100' },
 ];
 
 export const mockTasks: Task[] = [
-    { id: 'T01', title: 'Integrate Solana mainnet', status: 'Pending', dueDate: 'Tomorrow', assignedTo: 'Mike Patel' },
-    { id: 'T02', title: 'Client KYC verification for Acme Corp', status: 'Completed', dueDate: 'Yesterday', assignedTo: 'Priya Singh' },
-    { id: 'T03', title: 'Update stablecoin rates API', status: 'Pending', dueDate: 'Friday', assignedTo: 'Alex Chen' },
-    { id: 'T04', title: 'Plan Q2 feature roadmap', status: 'Pending', dueDate: 'Next week', assignedTo: 'Sarah Johnson' },
-    { id: 'T05', title: 'Resolve client ticket #5821', status: 'Completed', dueDate: 'Today', assignedTo: 'Priya Singh'},
-    { id: 'T06', title: 'Deploy security patch v1.2.4', status: 'Completed', dueDate: 'Yesterday', assignedTo: 'Alex Chen' },
-    { id: 'T07', title: 'Draft documentation for new API endpoint', status: 'Pending', dueDate: 'Wednesday', assignedTo: 'Alex Chen' }
+    { id: 'T01', title: 'Integrate Solana mainnet', status: 'Pending', dueDate: 'Tomorrow', assignedTo: 'Subhash' },
+    { id: 'T02', title: 'Client KYC verification for Acme Corp', status: 'Completed', dueDate: 'Yesterday', assignedTo: 'Gaffar' },
+    { id: 'T03', title: 'Update stablecoin rates API', status: 'Pending', dueDate: 'Friday', assignedTo: 'Navya' },
+    { id: 'T04', title: 'Plan Q2 feature roadmap', status: 'Pending', dueDate: 'Next week', assignedTo: 'Sowmya' },
+    { id: 'T05', title: 'Resolve client ticket #5821', status: 'Completed', dueDate: 'Today', assignedTo: 'Gaffar'},
+    { id: 'T06', title: 'Deploy security patch v1.2.4', status: 'Completed', dueDate: 'Yesterday', assignedTo: 'Navya' },
+    { id: 'T07', title: 'Draft documentation for new API endpoint', status: 'Pending', dueDate: 'Wednesday', assignedTo: 'Navya' }
 ];
 
 export const mockTimelineEvents: TimelineEvent[] = [

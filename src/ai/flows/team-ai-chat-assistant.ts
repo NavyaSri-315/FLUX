@@ -22,11 +22,11 @@ export type TeamAIChatAssistantOutput = z.infer<typeof TeamAIChatAssistantOutput
 
 // Mock data for tools
 const MOCK_TASKS = [
-  { taskId: '1', title: 'Integrate Solana mainnet', status: 'Pending', dueDate: 'Tomorrow' },
-  { taskId: '2', title: 'Client KYC verification for Acme Corp', status: 'Completed', dueDate: 'Yesterday' },
-  { taskId: '3', title: 'Update stablecoin rates API', status: 'Pending', dueDate: 'Friday' },
-  { taskId: '4', title: 'Review Q1 financial report', status: 'Pending', dueDate: 'End of week' },
-  { taskId: '5', title: 'Onboard new client Global Logistics', status: 'Completed', dueDate: 'Last week' },
+  { taskId: '1', title: 'Integrate Solana mainnet', status: 'Pending', dueDate: 'Tomorrow', assignedTo: 'Subhash' },
+  { taskId: '2', title: 'Client KYC verification for Acme Corp', status: 'Completed', dueDate: 'Yesterday', assignedTo: 'Gaffar' },
+  { taskId: '3', title: 'Update stablecoin rates API', status: 'Pending', dueDate: 'Friday', assignedTo: 'Navya' },
+  { taskId: '4', title: 'Review Q1 financial report', status: 'Pending', dueDate: 'End of week', assignedTo: 'Sowmya' },
+  { taskId: '5', title: 'Onboard new client Global Logistics', status: 'Completed', dueDate: 'Last week', assignedTo: 'Gaffar' },
 ];
 
 const MOCK_CLIENT_FEEDBACK = [
@@ -55,8 +55,7 @@ const getPendingTasks = ai.defineTool(
     // In a real app, this would query a database.
     const pendingTasks = MOCK_TASKS.filter(task => task.status === 'Pending');
     if (input.assignedTo) {
-      // This is a simplification; in a real app, tasks would have an 'assignedTo' field.
-      return pendingTasks.filter(task => task.title.includes(input.assignedTo) || task.taskId === input.assignedTo); // Mock filtering
+      return pendingTasks.filter(task => task.assignedTo.toLowerCase().includes(input.assignedTo!.toLowerCase()) || task.title.toLowerCase().includes(input.assignedTo!.toLowerCase()));
     }
     return pendingTasks;
   }
@@ -81,16 +80,12 @@ const getClientPerformanceMetrics = ai.defineTool(
     }),
   },
   async (input) => {
-    // Mock data for client performance.
-    // In a real app, this would aggregate data from 'users', 'transactions', 'client_feedback' collections.
     const metrics = {
       totalClients: 1200,
       totalVolumeProcessed: 1_200_000_000,
       averageSavings: 32,
-      latestClientFeedback: MOCK_CLIENT_FEEDBACK.slice(0, 3), // Return latest 3 feedback entries
+      latestClientFeedback: MOCK_CLIENT_FEEDBACK.slice(0, 3),
     };
-    // If a specific clientId is requested, one would fetch and return tailored metrics.
-    // For this mock, we return aggregate.
     return metrics;
   }
 );
@@ -108,8 +103,6 @@ const getRevenueFigures = ai.defineTool(
     }),
   },
   async (input) => {
-    // Mock data for revenue.
-    // In a real app, this would aggregate data from 'transactions' collection.
     const period = input.period || 'monthly';
     switch (period) {
       case 'daily':
@@ -121,7 +114,7 @@ const getRevenueFigures = ai.defineTool(
       case 'annually':
         return { totalFeesCollected: 5400000, projectedRevenue: 6000000 };
       default:
-        return { totalFeesCollected: 450000, projectedRevenue: 500000 }; // Default to monthly
+        return { totalFeesCollected: 450000, projectedRevenue: 500000 };
     }
   }
 );
@@ -131,7 +124,7 @@ const teamAIAssistantPrompt = ai.definePrompt({
   input: { schema: TeamAIChatAssistantInputSchema },
   output: { schema: TeamAIChatAssistantOutputSchema },
   tools: [getPendingTasks, getClientPerformanceMetrics, getRevenueFigures],
-  system: `You are an internal AI assistant for the FLUX team. Your goal is to help team members quickly retrieve business-critical information and provide relevant insights, alerts, or recommendations.
+  system: `You are an internal AI assistant for the FLUX team (Navya, Sowmya, Subhash, and Gaffar). Your goal is to help team members quickly retrieve business-critical information and provide relevant insights, alerts, or recommendations.
 
 Use the available tools to answer questions about:
 - Pending tasks (use getPendingTasks)
